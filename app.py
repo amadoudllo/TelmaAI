@@ -190,15 +190,5 @@ def home():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port, debug=False)
-```
 
----
 
-**Fichier 2 : `requirements.txt`**
-```
-flask==3.0.3
-twilio==9.3.3
-openai-whisper==20231117
-elevenlabs==1.9.0
-requests==2.32.3
-gunicorn==22.0.0
