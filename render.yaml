@@ -2,8 +2,7 @@ services:
   - type: web
     name: telma-api
     runtime: python
-    pythonVersion: "3.11.9"
-    buildCommand: pip install --upgrade pip setuptools && pip install -r requirements.txt
+    buildCommand: pip install --upgrade pip setuptools wheel && pip install -r requirements.txt
     startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --timeout 120
     envVars:
       - key: HF_TOKEN
