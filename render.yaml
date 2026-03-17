@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: telma-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --timeout 120
+    envVars:
+      - key: HF_TOKEN
+        sync: false
+      - key: TWILIO_ACCOUNT_SID
+        sync: false
+      - key: TWILIO_AUTH_TOKEN
+        sync: false
+      - key: ELEVENLABS_KEY
+        sync: false
+      - key: ELEVENLABS_VOICE_ID
+        sync: false
