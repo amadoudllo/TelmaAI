@@ -1,0 +1,6 @@
+flask==3.0.3
+twilio==9.3.3
+openai-whisper==20231117
+elevenlabs==1.9.0
+requests==2.32.3
+gunicorn==22.0.0
